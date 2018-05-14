@@ -1,6 +1,6 @@
 {
   "name": "@lug/netproxy-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NetProxy example of use with events from node",
   "main": "index.js",
   "scripts": {

@@ -2,17 +2,30 @@
 
 Example of use with events from node
 
-## Create a new proxy
+## Getting started
 
-- install `npm i @lug/netproxy`
-- import 
+- install `npm i @lug/netproxy-events`
+- use it 
 ```js
-const {NetClientProxy, NetServerProxy} = require('@lug/netproxy')
-class Server extends NetServerProxy { ... }
-class Client extends NetClientProxy { ... }
-```
+const {NetClientProxyEmitter, NetServerProxyEmitter} = require('@lug/netproxy')
 
-please see `netProxyEmul.js` for an example for how it works
+const client = new NetClientProxyEmitter()
+const server = new NetServerProxyEmitter()
+
+server.listen(9999)
+
+server.ev.on('socket.data',(socket, data)=>{
+  server.send(socket, `I received your message : """${data}"""`)
+})
+
+client.connect('localhost',9999)
+
+client.send('Hey srv its me')
+
+client.disconnect()
+
+server.stop()
+```
 
 ## Methods
 
