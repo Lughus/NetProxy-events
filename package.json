@@ -1,0 +1,29 @@
+{
+  "name": "@lug/netproxy-events",
+  "version": "1.0.0",
+  "description": "NetProxy example of use with events from node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lughus/NetProxy.git"
+  },
+  "keywords": [
+    "net",
+    "proxy",
+    "node"
+  ],
+  "author": "Westixy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lughus/NetProxy/issues"
+  },
+  "homepage": "https://github.com/Lughus/NetProxy#readme",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "@lug/netproxy": "^1.0.1",
+    "uuid": "^3.2.1"
+  }
+}
